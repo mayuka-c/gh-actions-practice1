@@ -4,7 +4,7 @@ jobs:
   event_details:
     runs-on: ubuntu-latest
     steps:
-      - name: "Output Details"
+      - name: "Output Event Details"
         run: |
           echo "Outputting github contexts"
-          echo "${{ toJson(github) }}"
+          echo "${{ toJson(github.event) }}"
